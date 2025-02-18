@@ -1,5 +1,6 @@
 import "./hero.scss";
 import { motion } from "framer-motion";
+import App from './../../src/App';
 const textVariants = {
     initial:{
         x:-500,
@@ -32,7 +33,7 @@ const sliderVariants = {
         transition:{
             repeat:Infinity,
             repeatType:"mirror",
-            duration:20,
+            duration:50,
             staggerChildren:0.1,
         },
     },
@@ -43,22 +44,23 @@ const Hero = () => {
     <div className="hero">
         <div className="wrapper">
             <motion.div className="textContainer" variants={textVariants} initial="initial" animate="animate">
-                <motion.h2 variants={textVariants}>Niku Bayasi Niku Taroo</motion.h2>
+                <motion.h2 variants={textVariants}>Nikku Portfolio</motion.h2>
                 <motion.h1 variants={textVariants}>Web Developer and UI Designer</motion.h1>
                 
                 <motion.div className="buttons" variants={textVariants}>
-                    <motion.button variants={textVariants}>See the Latest Works</motion.button>
-                    <motion.button variants={textVariants}>Contact Me</motion.button>
+                    <motion.button variants={textVariants}>
+                    最新の作品を見る</motion.button>
+                    <motion.button variants={textVariants}><a href="/contact">連絡してください</a></motion.button>
                  </motion.div>
                  <motion.img src="/scroll.png" alt="" variants={textVariants} animate="scrollButton"/>
             </motion.div> 
         </div>
         <motion.div className="slidingTextContainer" variants={sliderVariants} initial="initial" animate="animate">
-            Writer Content Creator Influencer
+        ライター コンテンツクリエイター
         </motion.div>
       <div className="imageContainer">
         <motion.h3>お肉美味しいよ！</motion.h3>
-        <img src="/hero.png" alt="" />
+        <motion.img src="/hero3.png" alt="hero image" />
       </div>
     </div>
   )

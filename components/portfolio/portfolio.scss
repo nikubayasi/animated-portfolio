@@ -9,7 +9,7 @@
         left:0;
         padding-top:50px;
         text-align: center;
-        color:orange;
+        color:rgb(75, 195, 199);
         font-size: 36px;
 
         @include mobile{
@@ -18,7 +18,7 @@
         }
 
         h1{
-
+            color:rgb(75, 195, 199);
         }
         .progressBar{
             height: 10px;
@@ -90,13 +90,17 @@
                 }
             }
             button{
-                background-color: orange;
+                background-color: rgb(75, 195, 199);
                 border: none;
-                border-radius: 10px;
+                border-radius: 50px;
                 padding: 10px;
                 width: 300px;
                 cursor: pointer;
-            }
+                -webkit-border-radius: 50px;
+                -moz-border-radius: 50px;
+                -ms-border-radius: 50px;
+                -o-border-radius: 50px;
+}
         }
     }
  }

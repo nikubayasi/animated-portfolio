@@ -37,16 +37,16 @@ const Services = () => {
       </motion.div>
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
-            <img src="/people.webp" alt="" />
-            <h1><motion.b whileHover={{color:"orange"}}>Unique</motion.b> Ideas</h1>
+            <img src="/city.jpg" alt="" />
+            <h1><motion.b whileHover={{color:"cyan"}}>ユニークな</motion.b> アイデア</h1>
         </div>
         <div className="title">
-            <h1><motion.b whileHover={{color:"orange"}}>For Your</motion.b> Business</h1>
-            <button>WHAT WE DO?</button>
+            <h1><motion.b whileHover={{color:"cyan"}}>あなたの</motion.b> ビジネスのために</h1>
+            <motion.button whileHover={{background:"lightgray",border:"1px solid #0f5572",color:"black",scale:0.9,transition:1,borderradius:"50px"}}>私たちがやっていること?</motion.button>
         </div>
       </motion.div>
       <motion.div className="listContainer" variants={variants}>
-        <motion.div className="box" whileHover={{background:"lightgray",color:"black"}}>
+        <motion.div className="box" whileHover={{background:"lightgray",color:"black",scale:1.03}}>
             <h2>Branding!</h2>
             <p>Lorem ipsum dolor sit amet consectetur 
                 adipisicing elit. Quam officiis perspiciatis 
@@ -54,9 +54,9 @@ const Services = () => {
                 modi hic voluptas labore vero nemo illum saepe 
                 maiores tempora suscipit aspernatur quaerat.?
             </p>
-            <button>Go</button>
+            <motion.button whileHover={{background:"lightgray",border:"1px solid #0f5572",color:"black",scale:0.9,transition:1,borderradius:"50px"}}>Go</motion.button>
         </motion.div>
-        <motion.div className="box"  whileHover={{background:"lightgray",color:"black"}}>
+        <motion.div className="box"  whileHover={{background:"lightgray",color:"black",scale:1.03}}>
             <h2>Branding!</h2>
             <p>Lorem ipsum dolor sit amet consectetur 
                 adipisicing elit. Quam officiis perspiciatis 
@@ -64,9 +64,9 @@ const Services = () => {
                 modi hic voluptas labore vero nemo illum saepe 
                 maiores tempora suscipit aspernatur quaerat.?
             </p>
-            <button>Go</button>
+            <motion.button whileHover={{background:"lightgray",border:"1px solid #0f5572",color:"black",scale:0.9,transition:1,borderradius:"50px"}}>Go</motion.button>
         </motion.div>
-        <motion.div className="box"  whileHover={{background:"lightgray",color:"black"}}>
+        <motion.div className="box"  whileHover={{background:"lightgray",color:"black",scale:1.1,transition:0.3}}>
             <h2>Branding!</h2>
             <p>Lorem ipsum dolor sit amet consectetur 
                 adipisicing elit. Quam officiis perspiciatis 
@@ -74,9 +74,9 @@ const Services = () => {
                 modi hic voluptas labore vero nemo illum saepe 
                 maiores tempora suscipit aspernatur quaerat.?
             </p>
-            <button>Go</button>
+            <motion.button whileHover={{background:"lightgray",border:"1px solid #0f5572",color:"black",scale:0.9,transition:1,borderradius:"50px"}}>Go</motion.button>
         </motion.div>
-        <motion.div className="box"  whileHover={{background:"lightgray",color:"black"}}>
+        <motion.div className="box"  whileHover={{background:"lightgray",color:"black",scale:1.1}}>
             <h2>Branding!</h2>
             <p>Lorem ipsum dolor sit amet consectetur 
                 adipisicing elit. Quam officiis perspiciatis 
@@ -84,7 +84,7 @@ const Services = () => {
                 modi hic voluptas labore vero nemo illum saepe 
                 maiores tempora suscipit aspernatur quaerat.?
             </p>
-            <button>Go</button>
+            <motion.button whileHover={{background:"lightgray",border:"1px solid #0f5572",color:"black",scale:0.9,transition:1,borderradius:"50px"}}>Go</motion.button>
         </motion.div>
       </motion.div>
     </motion.div>

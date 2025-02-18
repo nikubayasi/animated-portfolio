@@ -1,7 +1,7 @@
 @import "../../src/app.scss";
 .hero{
     height: calc(100vh - 100px);
-    background: linear-gradient(180deg,#0c0c1d,#111132);
+    background: linear-gradient(180deg,#000000,#0f5572);
     overflow: hidden;
     position: relative;
 
@@ -29,7 +29,7 @@
 
             h2{
                 font-size:50px;
-                color:rebeccapurple;
+                color:rgb(63, 223, 255);
                 letter-spacing: 15px;
                 @include mobile{
                     font-size:30px;
@@ -74,6 +74,7 @@
             height: 50%;
             width: 100%;
             top:unset;
+            right:0;
             bottom:0;
         }
         img{
@@ -84,8 +85,8 @@
     }
     .slidingTextContainer{
         position: absolute;
-        font-size: 40vh;
-        bottom: -120px;
+        font-size: 30vh;
+        bottom: -100px;
         white-space: nowrap;
         color: #ffffff20;
         width: 50%;
