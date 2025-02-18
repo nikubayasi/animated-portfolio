@@ -1,0 +1,34 @@
+@import "../../src/app.scss";
+.navbar{
+    height: 100px;
+
+    .wrapper{
+        max-width:1366px;
+        margin:auto;
+        display:flex;
+        align-items: center;
+        justify-content:space-between;
+        height:100%;
+        @include mobile{
+            justify-content:flex-end;
+        }
+
+        span{
+            font-weight: bold;
+            @include mobile{
+                display:none;
+            }
+        }
+
+        .social{
+            display:flex;
+            gap:20px;
+            padding: 25px 20px;
+
+            img{
+                width:35px;
+                height:35px;
+            }
+        }
+    }
+}
