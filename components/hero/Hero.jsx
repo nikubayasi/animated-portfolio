@@ -1,6 +1,6 @@
 import "./hero.scss";
 import { motion } from "framer-motion";
-import App from './../../src/App';
+
 const textVariants = {
     initial:{
         x:-500,
@@ -17,7 +17,7 @@ const textVariants = {
     },
     scrollButton:{
         opacity:0,
-        y:25,
+        y:20,
         transition:{
             duration:2,
             repeat:Infinity,
@@ -42,25 +42,30 @@ const sliderVariants = {
 const Hero = () => {
   return (
     <div className="hero">
+        
         <div className="wrapper">
             <motion.div className="textContainer" variants={textVariants} initial="initial" animate="animate">
                 <motion.h2 variants={textVariants}>Nikku Portfolio</motion.h2>
-                <motion.h1 variants={textVariants}>Web Developer and UI Designer</motion.h1>
+                <motion.h2 variants={textVariants}>Web Developer</motion.h2> 
+                <motion.h2>and</motion.h2>
+                <motion.h2 variants={textVariants}>UI Designer</motion.h2>
                 
                 <motion.div className="buttons" variants={textVariants}>
                     <motion.button variants={textVariants}>
                     最新の作品を見る</motion.button>
-                    <motion.button variants={textVariants}><a href="/contact">連絡してください</a></motion.button>
+                    <motion.button variants={textVariants}><a href="/contact">お問い合わせください</a></motion.button>
                  </motion.div>
-                 <motion.img src="/scroll.png" alt="" variants={textVariants} animate="scrollButton"/>
+                 <motion.img src="/scroll.webp" alt="" variants={textVariants} animate="scrollButton"/>
             </motion.div> 
         </div>
         <motion.div className="slidingTextContainer" variants={sliderVariants} initial="initial" animate="animate">
         ライター コンテンツクリエイター
         </motion.div>
       <div className="imageContainer">
-        <motion.h3>お肉美味しいよ！</motion.h3>
-        <motion.img src="/hero3.png" alt="hero image" />
+
+        <motion.img src="/hero3.png" alt="hero image"   initial={{ opacity: 0, y: 50 }} 
+  animate={{ opacity: 1, y: 0 }} 
+  transition={{ duration: 1 }} />
       </div>
     </div>
   )

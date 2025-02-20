@@ -1,4 +1,6 @@
-@import "../../src/app.scss";
+@use "@/styles/mixins.scss" as *;
+@use "@/app.scss";
+
 .sidebar{
     
     display: flex;

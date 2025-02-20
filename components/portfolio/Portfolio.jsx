@@ -34,19 +34,22 @@ const items = [
 
 const Single = ({item}) => {
   const ref = useRef();
-  const { scrollYProgress } = useScroll({target:ref, 
-    //offset:["start start","end start"]
+  const { scrollYProgress } = useScroll({target:ref, offset:["start start","end start"]
    });
-  const y = useTransform(scrollYProgress,[0,1],[-700,700]);
+  // const scaleX = useTransform(scrollYProgress,{
+  //   stiffness:100,
+  //   damping:30,
+  // });
+  const y = useTransform(scrollYProgress, [0,1], [-300,300]);
 
   return (
     <section>
       <div className="container">
         <div className="wrapper">
-          <div className="imageContainer"  ref={ref}>
-          <img src={item.img} alt="" />
+          <div className="imageContainer" ref={ref}>
+          <img src={item.img} alt="project image" />
           </div>
-          <motion.div className="textContainer" style={{y}}>
+          <motion.div className="textContainer" >
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
             <button>See Demo</button>
@@ -58,7 +61,7 @@ const Single = ({item}) => {
 }
 const Portfolio = () => {
   const ref = useRef();
-  const { scrollYProgress } = useScroll({target:ref, offset:["end end", "start start"]});
+  const { scrollYProgress } = useScroll({target:ref, offset:["start start", "end start"]});
 
   const scaleX = useSpring(scrollYProgress,{
     stiffness:100,

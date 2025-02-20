@@ -2,7 +2,8 @@ import "./contact.scss";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import emailjs from '@emailjs/browser';
-import { useState } from "react";
+import { useEffect,useState } from "react";
+
 const variants = {
     initial:{
         y: 500,
@@ -39,21 +40,29 @@ const Contact = () => {
             },
           );
       };
+      const [isPathVisible, setIsPathVisible] = useState(false);
+
+    useEffect(() => {
+        if (isInView) {
+            setIsPathVisible(true);
+        }
+    }, [isInView]);
 
     return (
         <motion.div ref={ref} className="contact" variants={variants} initial="initial" whileInView={"animate"}>
         <motion.div className="textContaier" variants={variants}>
-            <motion.h1 variants={variants}>Let's Work <br /> Together</motion.h1>
+            <motion.h1 variants={variants}>
+            一緒に <br /> 働きましょう</motion.h1>
             <motion.div className="item" variants={variants}>
-                <h2>Mail</h2>
+                <h2>メール</h2>
                 <span>sagas@gmail.com</span>
             </motion.div>
             <motion.div className="item" variants={variants}>
-                <h2>Address</h2>
+                <h2>住所</h2>
                 <span>Hamura City Tokyo</span>
             </motion.div>
             <motion.div className="item" variants={variants}>
-                <h2>Phone</h2>
+                <h2>電話番号</h2>
                 <span>080-0000-9999</span>
             </motion.div>
         </motion.div>
@@ -66,7 +75,7 @@ const Contact = () => {
                     <motion.path 
                     strokeWidth={0.2}
                     initial={{pathLength:0}}
-                    animate={isInView && {pathLength:1}}
+                    animate={isPathVisible ? { pathLength: 1 } : { pathLength: 0 }} 
                     transition={{duration:2}}
                     d="M1 5H2V4H20V5H21V18H20V19H2V18H1V5M3 17H19V9H18V10H16V11H14V12H12V13H10V12H8V11H6V10H4V9H3V17M19 6H3V7H5V8H7V9H9V10H13V9H15V8H17V7H19V6Z">
                     </motion.path>

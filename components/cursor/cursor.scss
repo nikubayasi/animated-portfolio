@@ -1,4 +1,6 @@
-@import "../../src/app.scss";
+@use "@/styles/mixins.scss" as *;
+@use "@/app.scss";
+
 .cursor{
     width: 20px;
     height: 20px;

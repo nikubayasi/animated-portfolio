@@ -1,95 +1,126 @@
-@import "../../src/app.scss";
-.hero{
+@use "@/styles/mixins.scss" as *;
+@use "@/app.scss";
+
+.hero {
     height: calc(100vh - 100px);
-    background: linear-gradient(180deg,#000000,#0f5572);
+    // background: linear-gradient(180deg, #000000, #0f5572);
+    background: url("bghero3.webp")  no-repeat center  rgba(0, 0, 0, .5);
+
+    background-size: cover;
     overflow: hidden;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
 
-    .wrapper{
-        max-width:1366px;
+    .wrapper {
+        width: 100%;
         height: 100%;
-        margin:auto;
-        
-   
-        .textContainer{
-            width: 55%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+        .textContainer {
+            width: 70%;
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            gap:40px;
+            
 
-            @include mobile{
-                height:50%;
+            @include mobile {
+                height: 50%;
                 width: 100%;
-                gap:20px;
+                gap: 20px;
                 align-items: center;
                 text-align: center;
             }
 
-            h2{
-                font-size:50px;
-                color:rgb(63, 223, 255);
-                letter-spacing: 15px;
-                @include mobile{
-                    font-size:30px;
-                    letter-spacing: 10px;
-                    gap:20px;
+            h2 {
+                font-size: 80px;
+                color: rgb(134, 235, 255);
+                letter-spacing: 8px;
+    
+                @include mobile {
+                    font-size: 24px;
+                    letter-spacing: 5px;
                 }
             }
-            h3{
-                display: inline-block;
-            }
-            h1{
-                font-size: 88px;
-                @include mobile{
-                    font-size: 40px;
+            h1 {
+                font-size: 60px;
+    
+                @include mobile {
+                    font-size: 32px;
                 }
             }
-            .buttons{
-                button{
-                    padding:20px;
-                    border:1px solid white;
+
+            .buttons {
+                button {
+                    padding: 20px;
+                    border: 1px solid white;
                     border-radius: 10px;
-                    background-color: transparent;
-                    color: white;
-                    margin-right:20px;
+                    background: rgba(255,255,255,0.8);
+                    color: rgb(28, 90, 102);
+                    margin-right: 20px;
+                    margin-top: 100px;
                     cursor: pointer;
                     font-weight: 300;
                 }
             }
 
-            img{
+            img {
                 width: 50px;
             }
         }
-    }
-
-    .imageContainer{
-        height:100%;
-        position:absolute;
-        top:0;
-        right:0;
-        @include mobile{
-            height: 50%;
-            width: 100%;
-            top:unset;
-            right:0;
-            bottom:0;
-        }
-        img{
-            width: 100%;
+        .imageContainer {
+            position: absolute; // 画面内で固定
+            top: 0;
+            right: 0; // 右端に寄せる
             height: 100%;
-            object-fit:cover;
+            max-width: 50%; // 画像の最大幅を調整（50% くらいがバランス良い）
+            display: flex;
+            align-items: flex-end; // 必要に応じて調整
+            
+            img {
+                width: 100%;
+                height: 100%;
+                bottom:-50px;
+                object-fit: contain; // 画像が切れないように調整
+            }
+        
+            @include mobile {
+                position: relative; // モバイルでは通常の配置
+                width: 100%;
+                height: auto;
+        
+                img {
+                    margin-left: 200px;
+                    width: 100%;
+                    height: auto;
+                }
+            }
         }
+    
+        .slidingTextContainer {
+            z-index:10;
+            position: absolute;
+            font-size: 20vh;
+            bottom: -50px;
+            white-space: nowrap;
+            color: #ffffff20;
+            font-weight: bold;
+            @include mobile {
+                font-size: 15vh;
+            }
+        }
+        
     }
-    .slidingTextContainer{
-        position: absolute;
-        font-size: 30vh;
-        bottom: -100px;
-        white-space: nowrap;
-        color: #ffffff20;
-        width: 50%;
-        font-weight: bold;
-    }
-}
+   
+
+

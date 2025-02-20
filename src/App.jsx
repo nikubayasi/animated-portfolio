@@ -7,6 +7,7 @@ import Services from "../components/services/Services";
 import Portfolio from "../components/portfolio/Portfolio";
 import Contact from "../components/contact/Contact";
 import Cursor from "../components/cursor/Cursor";
+import Strongs from '../components/strongs/Strongs'
 const App = () => {
   return <div>
     <Cursor />
@@ -17,7 +18,9 @@ const App = () => {
     <section id="Services"><Parallax type="services"/></section>
     <section><Services /></section>
     <section id="Portfolio"><Parallax type="portfolio"/></section>
-    <Portfolio />
+   <Portfolio />
+    <section id="Portfolio"><Parallax type="portfolio"/></section>
+    <section><Strongs /></section>
     <section id="Contact">
       <Contact />
     </section>
